@@ -1,5 +1,5 @@
 <?php
-if($this->session->flashdata('msg2')){
+if($this->session->userdata('userdata')){
     include 'includings/header.php';
 }
 else{

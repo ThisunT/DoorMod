@@ -28,7 +28,7 @@ class Login extends CI_Controller{
                     'loggedin'=>TRUE
                 );
 
-                $this->session->set_userdata($user_data);
+                $this->session->set_userdata('userdata',$user_data);
 
                 $this->session->set_flashdata('msg2',"Welcome back!");
                 redirect('Home/index');

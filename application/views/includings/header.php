@@ -31,7 +31,7 @@
                 <li><a href="" data-toggle="modal" data-target="#addpost">Add Post</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo (base_url("index.php/Home/profile")) ?>">Friends</a></li>
+                <li><a href="<?php echo (base_url("index.php/Home/profile")) ?>"><?php echo $this->session->userdata('userdata')['dp']; ?></a></li>
                 <li><a href="<?php echo (base_url("index.php/Home/messages")) ?>"><span class="glyphicon glyphicon-envelope"></span></a></li>
                 <li><a href="<?php echo (base_url("#")) ?>"><span class="glyphicon glyphicon-bell"></span></a></li>
                 <li><a href="<?php echo (base_url("index.php/Login/LogoutUser")) ?>">Logout</a></li>
@@ -138,7 +138,7 @@
 
             var title_length = $("#title").val().length;
 
-            if(title_length < 5 || title_length > 20) {
+            if(title_length < 5 || title_length > 30) {
                 $("#title_error_message").html("Should be between 5-20 characters");
                 $("#title_error_message").show();
                 error_title = true;
